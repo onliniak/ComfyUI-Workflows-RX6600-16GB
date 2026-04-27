@@ -1,6 +1,12 @@
 # ComfyUI-Workflows-RX6600-16GB
 
-Jeśli chodzi o LTX 2.3 to mogę polecić: https://civitai.com/models/2339823/ltx23-gguf-low-vram-video-generation-i2v-t2v (129 klatek w 1.5 godziny)
+Przypięte:
+- Jeśli chodzi o LTX 2.3 to mogę polecić: https://civitai.com/models/2339823/ltx23-gguf-low-vram-video-generation-i2v-t2v (129 klatek 720p w 1.5 godziny)
+- Przeciętny czas generowania 480p to 15-20 minut na każde 16 klatek (1 sekunda).
+    - 7+7 kroków w wersji FSampler i 4+4 kroki w wersji lightx2
+    - Plik stronicowania na dysku SSD SATA
+- 832x480 polecam ograniczyć do 33 klatek, a 1280x720 do 17 klatek.
+- Jedynie pierwszy klip powinien mieć shift na wysokim modelu i noise na niskim modelu. Kolejne muszą mieć noise_seed fixed 0.
 
 Instalacja:
 1. Zainstaluj https://pinokio.co/
@@ -22,6 +28,7 @@ Co nie działa ?
 
 - Zaawansowane rozszerzenia jak SeedVR2
   - Zwłaszcza takie, które zależą od Flash Attention, Sage Attention i innych attention
+  - Ta wersja działa **bez** instalowania sterowników PRO (stąd 10 GB więcej pobranych plików)
 - Modele z iq w nazwie
 
 Potrzebne rozszerzenia:
