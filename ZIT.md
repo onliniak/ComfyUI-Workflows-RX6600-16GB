@@ -83,9 +83,19 @@ Właściwie to optymalizacja kosztów LMS wygląda jakoś tak:
 - Pokaż ludzi
 - Dokończ szczegóły dotyczące ludzi jeśli masz wystarczająco dużo kroków
 
-Teoretycznie, żeby dokładnie zrozumieć prompta musiałbym mieć albo
-dwa KSamplery (jak w Wan 2.2) albo dokładnie opisać tło, następnie
-edytować zdjęcie by nałożyć na nie kolejną warstwę, potem kolejna edycja
-z dokładniejszymi szczegółami ... ale ryzykuję, że ZIT wyrzuci mi zdjęcie
-w ogóle nie związane z moim. Co innego Flux2 Klein 9B, który akurat w
-edycji image-to-image radzi sobie doskonale.
+### Łączenie zmiennych
+
+Przez przypadek powstał mi eksperyment cnpsg. 1-2 minuty na wygenerowanie
+zdjęcia (512x512) i o wiele lepsze podążanie za promptem, niż w poprzedniej wersji.
+Tylko nie wiem czemu myli psa i jaszczurkę.
+
+Wariant "latent" po otrzymaniu kilku przykładowych zdjęć próbuje wygenerować
+coś, co spełnia wszystkie Twoje wymagania. Obecnie przestawiony na latenty.
+Tak serio to od edycji zdjęć jest Z-Image-base.
+
+Wariant 90 po prostu łączy prompty w jeden długi i każdemu z nich nadaje
+ten sam priorytet (badania blackbox, sam nie wiem co robi FluxGuidance).
+Do tego może zapewniać wyższą unikalność wyników, niż KSampler.
+W każdym bądź razie nie dość, że działa to jeszcze wynik podoba mi się
+bardziej, niż poprzednio co można uznać za sukces. Na razie oznaczam
+jako eksperymentalny tryb kreatywny.
