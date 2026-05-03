@@ -49,6 +49,45 @@ Rowerzystą jest Koreańczyk w okularach przeciwsłonecznych, o niebieskich opra
 Kamera jest ustawiona po skosie względem rowerzysty.
 ```
 
+```
+# Variables.
+
+Young Chinese woman named $AK47$ in red Hanfu, intricate embroidery. Impeccable makeup, red floral forehead pattern. Elaborate high bun, golden phoenix headdress, red flowers, beads.
+
+$DrewnianyBlok$ = wooden cubic block. $DrewnianyBlok$ is not visible unless $AK47$ is not visible.
+
+# Prompt.
+
+Divide screen at 2 equal panels. On left panel is $AK47$, on right panel $AK47$ is not visible.
+```
+
+- Z-Image-Turbo nie tylko obsługuje zmienne (dowolne słowo jakiego nie rozumie) ale też warunki (*unless* jak w Ruby).
+- Komentarze oznaczamy kratką (#)
+
+```
+Zakładając, że na wprost od Ciebie znajduje się czerwony drewniany blok, po Twojej prawej stronie zielony drewniany blok, a po Twojej lewej stronie niebieski drewniany blok. Uwzględniwszy iż zielony i niebieski blok nie mogą się pojawić na jednej scenie.
+
+Podziel ekran na 3 równe części: na lewym scena jest obrócona o 90° w lewo, na prawym scena jest obrócona o 90° w prawo, na środkowym scena jest widoczna pod kątem z dołu.
+```
+
+Odpowiedzią na zagadkę jest czerwony blok przesunięty lekko w prawo po lewej stronie
+oraz zielony blok lekko przesunięty w lewo po prawej stronie. 
+
+```
+Playground on the middle of park. Behind you is waterfall.
+
+Divide screen at 3 equal panels, left panel show camera turned by 90° to left, middle panel has volumetric fog, right panel show camera turned by 180° to right.
+```
+
+Bardzo ciekawy eksperyment, bo z ludzkiego punktu widzenia praktycznie niewykonalny.
+Jeśli znajduję się w pustej przestrzeni pośrodku niczego, wiem co jest przede mną
+i wiem co jest za mną ale nie ma absolutnie niczego obok mnie to skąd mam wiedzieć
+jak obrócić się w bok ?
+
+Wyszło coś takiego:
+- Pośrodku mam wodospad, na dole woda tworzy coś między mgłą, a dymem jak chciałem.
+- Po obu stronach mam identyczny obraz ale z detalami w różnych kolorach.
+
 ## Syntax
 
 Zasady tego języka programowania są bardzo proste:
@@ -64,7 +103,7 @@ będzie się kłócił ze szczegółem B, wtedy ZIT sam zdecyduje co zostawi, a 
 drugiej na sofie po prostu posadzi obie osoby na kanapie.
 - Jeśli ktoś pisze o robalich okach, żabach i ptakach to nic dziwnego, że nic mu nie wychodzi.
 Chińskie modele rozumieją poprawne określenia jak: kamera pod kątem z góry/dołu,
-z widoku drona, płaskie uderzenie (z widoku oczu (?)), przestaw kamerę o 90° w lewo/prawo,
+z widoku drona, płaskie uderzenie (z widoku oczu (?)), obróć scenę o 90° w lewo/prawo,
 przestaw obiektyw na szerokokątny, przesuń kamerę do przodu/tyłu. Tego rodzaju rzeczy.
 - ZIT rozumie polecenie "pokaż jak (będzie) wyglądało moje ciało w wieku X lat"
     - Ale podobnie jak w przypadku bliźniaka po prostu skopiuje wszystkie szczegóły z obiektu rodzica
